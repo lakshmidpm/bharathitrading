@@ -72,7 +72,7 @@ let sellValue = 0;
 
 
 // DB config
-const uri = 'mongodb+srv://bharathidpm:lakshmidpm@cluster0.fcttb.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://bharathidpm:lakshmidpm@cluster0.fcttb.mongodb.net/bars11?retryWrites=true&w=majority';
 
 
 //Morning schedule db fetch
