@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 
 var schedule = require('node-schedule');
 var KiteConnect = require("kiteconnect").KiteConnect;
-var kc = new KiteConnect({ api_key: "7n3x8fq0i43xd058"});
+var kc = new KiteConnect({ api_key: "6l7wlikr9ar2c61y"});
 const axios = require('axios');
 var querystring = require('querystring');
 var bodyParser = require('body-parser');
