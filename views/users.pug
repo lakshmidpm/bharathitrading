@@ -1,0 +1,9 @@
+extends layout
+block content
+    div.text-center
+        p  Welcome Dear #{username}!
+    div.text-left
+        p  Daily Trade Logs............
+    div.text-left
+        each name in {wc}
+            p  #{name}
