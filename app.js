@@ -198,7 +198,7 @@ kc.getQuote('NFO:'+ tsymbol).then(function(response) {
 function streamN() {
 	addLogs("Data streaming started");
 	var KiteTicker = require("kiteconnect").KiteTicker;
-    var ticker = new KiteTicker({ api_key: "7n3x8fq0i43xd058", access_token: access_token });
+    var ticker = new KiteTicker({ api_key: "6l7wlikr9ar2c61y"}, access_token: access_token });
 
     // set autoreconnect with 24 maximum reconnections and 5 second interval
     ticker.autoReconnect(true, 24, 5)
