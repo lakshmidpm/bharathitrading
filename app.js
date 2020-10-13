@@ -148,7 +148,6 @@ function startLogin() {
 				addLogs("Login Successful");
 				startSession();
 				clearInterval(loginInterval);
-				clearInterval(emergencylogin);
 			}).catch((error) => {
 				console.error(error)
 			});  
