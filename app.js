@@ -86,6 +86,14 @@ schedule.scheduleJob('00 37 03 * * 1-5', function(){
 	loginInterval =   setInterval(() =>  startLogin()  , 60000);
 });
 
+// Emergency restart
+if ((new Date().getHours()) >=3 && (new Date().getHours()) <=9 ) {
+	if ((new Date().getDay()) >=1 && (new Date().getDay()) <=5){
+	startMongo();	
+	emergencylogin =	setInterval(() =>  startLogin()  , 60000);
+	}
+}
+
 // Extract data from DB 
 function startMongo() {	
 	mongodb.connect(uri,{ useUnifiedTopology: true }).then(res => {
@@ -148,6 +156,7 @@ function startLogin() {
 				addLogs("Login Successful");
 				startSession();
 				clearInterval(loginInterval);
+				clearInterval(emergencylogin);
 			}).catch((error) => {
 				console.error(error)
 			});  
@@ -177,7 +186,7 @@ function startSession() {
 function marginCalc() {
 	kc.getMargins().then(function(response) {
 		console.log(response);
-		margin = response.equity.net
+		margin = response.equity.available.opening_balance;
 		tradeSize = 75 * (margin-(margin % 90000))/90000;
 	}).catch(function(err) {
 		console.log(err);
