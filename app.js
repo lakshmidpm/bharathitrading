@@ -306,7 +306,7 @@ function buyCheck() {
 }
 
 function buyClose() {
-	if (ltp < (buyValue - 40) || ltp > (buyValue + 35) ){	
+	if (ltp < (buyValue - 35) || ltp > (buyValue + 40) ){	
 		buyPositionClosed =1;
 		kc.placeOrder("regular", {
 			"exchange": "NFO",
@@ -377,7 +377,7 @@ function sellCheck() {
 }
 
 function sellClose() {	
-	if (ltp < (sellValue - 35) || ltp > (sellValue + 40) ){
+	if (ltp < (sellValue - 40) || ltp > (sellValue + 35) ){
         sellPositionClosed =1;	
 		kc.placeOrder("regular", {
 			"exchange": "NFO",
