@@ -430,7 +430,7 @@ schedule.scheduleJob('00 02 10 * * 1-5', function(){
     sellValue = 0;
 	addLogs("DB Updated");
     updateDb({"futlevel.iboLow": 0 , "futlevel.iboHigh": 0,"futsell.sellPositionInitiated": 0, "futsell.sellPositionOpened": 0, "futsell.sellValue": 0, "futsell.sellPositionClosed": 0,
-		"futbuy.buyPositionInitiated": 0, "futbuy.buyPositionOpened": 0, "futbuy.buyValue": 0 })
+		"futbuy.buyPositionInitiated": 0, "futbuy.buyPositionOpened": 0, "futsell.buyPositionClosed": 0,"futbuy.buyValue": 0 })
 
 
 });
