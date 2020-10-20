@@ -187,7 +187,7 @@ function marginCalc() {
 	kc.getMargins().then(function(response) {
 		console.log(response);
 		margin = response.equity.available.opening_balance;
-		tradeSize = 75 * (margin-(margin % 90000))/90000;
+		tradeSize = 75 * (margin-(margin % 190000))/190000;
 	}).catch(function(err) {
 		console.log(err);
 	});		
