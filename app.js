@@ -91,6 +91,7 @@ if ((new Date().getHours()) >=3 && (new Date().getHours()) <=9 ) {
 	if ((new Date().getDay()) >=1 && (new Date().getDay()) <=5){
 	startMongo();	
 	emergencylogin =	setInterval(() =>  startLogin()  , 60000);
+	emaInterval =   setInterval(() =>  emacalc()  , 300000); 
 	}
 }
 
