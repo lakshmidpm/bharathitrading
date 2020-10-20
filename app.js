@@ -30,7 +30,6 @@ app.use('/users', usersRouter);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var webPageDetails = [];
-
 var referer;
 var scookie;
 var sredirect;
