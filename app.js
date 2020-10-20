@@ -268,7 +268,7 @@ schedule.scheduleJob('00 15 04 * * 1-5', function(){
 
 //check for buyPosition
 function buyCheck() {	
-	if (ema5Close > iboHigh && ema5Close > ema21) {
+	if ((ema5Close +4) > iboHigh && ema5Close > ema21) {
 		buyPositionInitiated = 1;	
 		kc.placeOrder("regular", {
 			"exchange": "NFO",
@@ -339,7 +339,7 @@ function buyClose() {
 }
 
 function sellCheck() {	
-	if (ema5Close < iboLow && ema5Close < ema21) {
+	if ((ema5Close-4) < iboLow && ema5Close < ema21) {
 		sellPositionInitiated = 1;
 		kc.placeOrder("regular", {
 			"exchange": "NFO",
